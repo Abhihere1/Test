@@ -79,13 +79,22 @@ export default function KYCQueuePage() {
             </h1>
             <p className="text-sm text-slate-500">Identity verification queue</p>
           </div>
-          <button
-            data-testid="start-kyc-review-btn"
-            onClick={() => router.push("/kyc/apply")}
-            className="px-4 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors"
-          >
-            Start KYC Review
-          </button>
+          <div className="flex gap-2">
+            <button
+              data-testid="new-kyc-application-btn"
+              onClick={() => router.push("/kyc/applicant/new")}
+              className="px-4 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors"
+            >
+              + New Application
+            </button>
+            <button
+              data-testid="start-kyc-review-btn"
+              onClick={() => router.push("/kyc/apply")}
+              className="px-4 py-2 text-sm font-medium text-teal-700 bg-teal-50 border border-teal-200 rounded-lg hover:bg-teal-100 transition-colors"
+            >
+              Start KYC Review
+            </button>
+          </div>
         </div>
       </header>
 
